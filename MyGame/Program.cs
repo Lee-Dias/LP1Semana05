@@ -6,14 +6,15 @@ namespace MyGame
     {
         static void Main(string[] args)
         {
-            string olas = "3";
-            int e = int.Parse(olas);
+            int e = int.Parse(args[0]);
             Enemy[] ola = new Enemy [e];
             for (int i = 0; i<=(e-1); i++){
                 Console.Write($"Nome do inimigo {i+1}: ");
                 string n = Console.ReadLine();
-                Enemy ene = new Enemy(n);
-                ola[i] = ene;
+                ola[i] = new Enemy(n);
+            }
+            for (int i = 0; i<=(e-1); i++){
+                Console.WriteLine($"{ola[i].GetName()} {ola[i].GetHealth()} {ola[i].GetShield()}" );
             }
         }
     }
