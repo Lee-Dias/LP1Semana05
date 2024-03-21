@@ -9,15 +9,20 @@ namespace MyGame
         private string name;
         private float health = 100;
         private float shield = 0;
+        static int amountofpowerups = 0;
         public Enemy(string name){
             this.name = SetName(name);
             health = 100;
             shield = 0;
+            amountofpowerups = 0;
 
         } 
 
         public string GetName(){
             return name;
+        }
+        public int Getamountofpowerups(){
+            return amountofpowerups;
         }
 
         public void TakeDamage(float damage){
@@ -48,13 +53,15 @@ namespace MyGame
                 case PowerUp.Health:
                     health += aumentar;
                     if(health>100) health = 100;
+                    amountofpowerups += 1;
                     break;
                 case PowerUp.shield:
                     shield += aumentar;
                     if(shield>100) shield = 100;
+                    amountofpowerups += 1;
                     break;
                 default:
-                    Console.WriteLine("Invalid power-up type.");
+                    Console.WriteLine("thats is not a powerup");
                     break;
             }
         }
