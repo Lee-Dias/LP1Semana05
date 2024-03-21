@@ -18,8 +18,10 @@ namespace MyGame
             ola[0].PickupPowerUp(pow, 50);
             ola[0].TakeDamage(70);
             for (int i = 0; i<=(e-1); i++){
-                Console.WriteLine($"{ola[i].GetName()} {ola[i].GetHealth()} {ola[i].GetShield()} {ola[i].Getamountofpowerups()}" );
+                Console.WriteLine($"{ola[i].GetName()} {ola[i].GetHealth()} {ola[i].GetShield()}" );
             }
+            
+            Console.WriteLine($"amount of powerups used {Enemy.Getamountofpowerups()}");
         }
     }
 }

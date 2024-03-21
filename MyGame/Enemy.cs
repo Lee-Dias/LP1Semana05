@@ -9,19 +9,26 @@ namespace MyGame
         private string name;
         private float health = 100;
         private float shield = 0;
-        static int amountofpowerups = 0;
+        static int amountofpowerups;
+
+        static void initstatic(){
+            amountofpowerups = 0;
+            
+        }
         public Enemy(string name){
             this.name = SetName(name);
             health = 100;
             shield = 0;
-            amountofpowerups = 0;
+            initstatic();
 
         } 
+
+
 
         public string GetName(){
             return name;
         }
-        public int Getamountofpowerups(){
+        public static int Getamountofpowerups(){
             return amountofpowerups;
         }
 
