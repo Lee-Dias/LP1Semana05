@@ -1,5 +1,9 @@
+using System;
+
 namespace MyGame
-{
+{       
+
+
     public class Enemy
     {
         private string name;
@@ -37,6 +41,21 @@ namespace MyGame
             if (name.Length > MaxLength)
             name = name.Substring(0, MaxLength);
             return name;
+        }
+        public void PickupPowerUp(PowerUp po, float aumentar){
+
+            switch (po)
+            {
+                case PowerUp.Health:
+                    health += aumentar;
+                    break;
+                case PowerUp.shield:
+                    shield += aumentar;
+                    break;
+                default:
+                    Console.WriteLine("Invalid power-up type.");
+                    break;
+            }
         }
 
     }

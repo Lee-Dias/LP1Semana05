@@ -2,10 +2,12 @@
 
 namespace MyGame
 {
+
     class Program
     {
         static void Main(string[] args)
         {
+            PowerUp pow = 0;
             int e = int.Parse(args[0]);
             Enemy[] ola = new Enemy [e];
             for (int i = 0; i<=(e-1); i++){

@@ -1,10 +1,15 @@
 ﻿using System;
 namespace RanDice
 {
+
+
     class Program
     {
+
+
         static void Main(string[] args)
         {
+            
             int sum = 0;
             int n = int.Parse(args[0]);
             int s = int.Parse(args[1]);
