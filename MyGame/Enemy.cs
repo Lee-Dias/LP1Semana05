@@ -48,9 +48,11 @@ namespace MyGame
             {
                 case PowerUp.Health:
                     health += aumentar;
+                    if(health>100) health = 100;
                     break;
                 case PowerUp.shield:
                     shield += aumentar;
+                    if(shield>100) shield = 100;
                     break;
                 default:
                     Console.WriteLine("Invalid power-up type.");
