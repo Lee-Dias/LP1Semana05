@@ -13,6 +13,7 @@ namespace RanDice
                 int diceValue = rand.Next(1, 7);
                 sum += diceValue;
             }
+            Console.WriteLine(sum);
             
         }
     }
