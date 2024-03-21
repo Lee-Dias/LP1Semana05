@@ -1,3 +1,5 @@
+using System;
+
 namespace MyGame
 {
     public class Enemy
@@ -37,6 +39,15 @@ namespace MyGame
             if (name.Length > MaxLength)
             name = name.Substring(0, MaxLength);
             return name;
+        }
+        static void Main(string[] args)
+        {
+            int e = int.Parse(args[0])-1;
+            int[][] ola = new int [e-1] [];
+            for (int i = 0; i<e; i++){
+                Console.Write($"Nome do inimigo {i+1}: ");
+            }
+            
         }
 
     }
