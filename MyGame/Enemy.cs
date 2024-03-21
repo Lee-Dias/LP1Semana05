@@ -43,7 +43,6 @@ namespace MyGame
             return name;
         }
         public void PickupPowerUp(PowerUp po, float aumentar){
-
             switch (po)
             {
                 case PowerUp.Health:

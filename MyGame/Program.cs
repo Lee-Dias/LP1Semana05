@@ -7,7 +7,7 @@ namespace MyGame
     {
         static void Main(string[] args)
         {
-            PowerUp pow = 0;
+            PowerUp pow = PowerUp.shield;
             int e = int.Parse(args[0]);
             Enemy[] ola = new Enemy [e];
             for (int i = 0; i<=(e-1); i++){
@@ -15,6 +15,8 @@ namespace MyGame
                 string n = Console.ReadLine();
                 ola[i] = new Enemy(n);
             }
+            ola[0].PickupPowerUp(pow, 50);
+            ola[0].TakeDamage(70);
             for (int i = 0; i<=(e-1); i++){
                 Console.WriteLine($"{ola[i].GetName()} {ola[i].GetHealth()} {ola[i].GetShield()}" );
             }
