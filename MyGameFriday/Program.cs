@@ -15,13 +15,13 @@ namespace MyGameFriday
             gl.SetEnemyInRoom(98, new Enemy("Chet"));
             gl.SetEnemyInRoom(57, new Enemy("Out of order"));
 
-            Console.WriteLine($"Difficulty: {gl.GetDifficulty()}");
+            //Console.WriteLine($"Difficulty: {gl.GetDifficulty()}");
 
-            Console.WriteLine($"Number of rooms: {gl.GetNumRooms()}");
+            //Console.WriteLine($"Number of rooms: {gl.GetNumRooms()}");
 
-            Console.WriteLine($"Number of enemies: {gl.GetNumEnemies()}");
+            //Console.WriteLine($"Number of enemies: {gl.GetNumEnemies()}");
 
-            gl.PrintEnemies();
+            //gl.PrintEnemies();
 
             // Este programa mostra o seguinte no ecrã:
             //
